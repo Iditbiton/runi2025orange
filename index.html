@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>אתר קורס חדשנות</title>
+  <style>
+    /* רקע בגוונים של כתום */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #FFD89B, #FF7E5F);
+      color: #333;
+      direction: rtl;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* תפריט ראשי – קוביות נופלות */
+    #menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.8);
+      z-index: 100;
+      border-bottom: 2px solid #e67e22;
+    }
+    .nav-box {
+      background: #fff;
+      padding: 15px 25px;
+      border: 2px solid #e67e22;
+      border-radius: 8px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      font-weight: bold;
+      cursor: pointer;
+      opacity: 0;
+      animation: fall 0.8s forwards;
+    }
+    /* אנימציית נפילה */
+    @keyframes fall {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    /* Delay עבור כל קוביה לפי מיקומה */
+    .nav-box:nth-child(1) { animation-delay: 0.2s; }
+    .nav-box:nth-child(2) { animation-delay: 0.4s; }
+    .nav-box:nth-child(3) { animation-delay: 0.6s; }
+    .nav-box:nth-child(4) { animation-delay: 0.8s; }
+    .nav-box:nth-child(5) { animation-delay: 1s; }
+    .nav-box:nth-child(6) { animation-delay: 1.2s; }
+    .nav-box:nth-child(7) { animation-delay: 1.4s; }
+    .nav-box:nth-child(8) { animation-delay: 1.6s; }
+    
+    /* עיצוב כללי למקטעים */
+    section {
+      padding: 40px 20px;
+      margin: 20px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      margin-top: 0;
+      color: #e67e22;
+    }
+    /* לחצן חזרה לתפריט – בעיצוב מנורה */
+    .back-to-top {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background: #e67e22;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .back-to-top:hover {
+      background: #cf711f;
+    }
+    /* עיצוב לרשימות מאמרים */
+    .article-list {
+      list-style: none;
+      padding: 0;
+    }
+    .article-list li {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-bottom: 1px dotted #ccc;
+    }
+    .article-list li a {
+      color: #e67e22;
+      font-weight: bold;
+    }
+    /* עיצוב לקישור למייל ולוואטסאפ */
+    .contact-info a {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 8px 12px;
+      background: #fff;
+      border: 2px solid #e67e22;
+      border-radius: 6px;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- תפריט ראשי עם קוביות נופלות -->
+  <div id="menu">
+    <div class="nav-box"><a href="#course-description">תיאור הקורס</a></div>
+    <div class="nav-box"><a href="#learning-outcomes">תוצרי למידה</a></div>
+    <div class="nav-box"><a href="#course-goals">מטרות הקורס</a></div>
+    <div class="nav-box"><a href="#grading">הרכב הציון</a></div>
+    <div class="nav-box"><a href="#topics">נושאי הקורס</a></div>
+    <div class="nav-box"><a href="#required-reading">רשימת קריאה חובה</a></div>
+    <div class="nav-box"><a href="#optional-reading">קריאת רשות</a></div>
+    <div class="nav-box"><a href="#contact">פניה למרצה</a></div>
+  </div>
+
+  <!-- מקטע: תיאור הקורס -->
+  <section id="course-description">
+    <h2>תיאור הקורס</h2>
+    <p>
+      הקורס עוסק בכלי חדשנות כדרך לשיפור התחרותיות בסביבה משתנה. הסטודנטים ילמדו על תפקיד מנהל החדשנות, כלים ליצירתיות, והתמודדות עם אתגרים בעידן הבינה המלאכותית.
+    </p>
+    <button class="back-to-top" onclick="scrollToTop()">💡 חזרה לתפריט</button>
+  </section>
+
+  <!-- מקטע: תוצרי למידה -->
+  <section id="learning-outcomes">
+    <h2>תוצרי למידה</h2>
+    <ul>
+      <li>היכרות עם תפקידי מנהל החדשנות בארגונים</li>
+      <li>כלים ליצירתיות ויישום רעיונות</li>
+      <li>ניתוח אתגרי חדשנות והשפעת הבינה המלאכותית</li>
+      <li>עבודה בצוותים ופתרון בעיות חדשניות</li>
+    </ul>
+    <button class="back-to-top" onclick="scrollToTop()">💡 חזרה לתפריט</button>
+  </section>
+
+  <!-- מקטע: מטרות הקורס -->
+  <section id="course-goals">
+    <h2>מטרות הקורס</h2>
+    <p>
+      להקנות לסטודנטים את הידע והכלים הנדרשים ליישום חדשנות בתוך ארגונים, זיהוי הזדמנויות ואתגרים, והבנת חשיבות השינוי בסביבה העסקית.
+    </p>
+    <button class="back-to-top" onclick="scrollToTop()">💡 חזרה לתפריט</button>
+  </section>
+
+  <!-- מקטע: הרכב הציון -->
+  <section id="grading">
+    <h2>הרכב הציון</h2>
+    <ul>
+      <li>מבחן מסכם – 75%</li>
+      <li>משימה צוותית – 20%</li>
+      <li>השתתפות בהאקתון – 5%</li>
+    </ul>
+    <button class="back-to-top" onclick="scrollToTop()">💡 חזרה לתפריט</button>
+  </section>
+
+  <!-- מקטע: נושאי הקורס -->
+  <section id="topics">
+    <h2>נושאי הקורס</h2>
+    <p>
+      הקורס סוקר מגוון נושאים הכוללים את הסביבה והאקוסיסטם של חדשנות, חדשנות משרתת אסטרטגיה, בינה מלאכותית וחדשנות, ניהול תרבות חדשנות והתמודדות עם התנגדויות.
+    </p>
+    <p>בנוסף, במהלך הקורס ייערכו:
+      <br>- האקתון
+      <br>- משימות קבוצתיות
+      <br>- פעילות Outdoor
+    </p>
+    <button class="back-to-top" onclick="scrollToTop()">💡 חזרה לתפריט</button>
+  </section>
+
+  <!-- מקטע: רשימת קריאה חובה -->
+  <section id="required-reading">
+    <h2>רשימת קריאה חובה</h2>
+    <ul class="article-list">
+      <li>
+        Grilli, L., &amp; Pedota, M. (2024). Creativity and artificial intelligence: A multilevel perspective. Creativity and Innovation Management – 
+        <a href="https://doi.org/10.1111/caim.12580" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        Heller, B., Amir, A., Waxman, R., &amp; Maaravi, Y. (2023). Hack your organizational innovation: literature review and integrative model for running hackathons. Journal of Innovation and Entrepreneurship.
+      </li>
+      <li>
+        Inside the Box Innovation, Boyd D. and Goldenberg J. (2013), Simon &amp; Schuster.
+      </li>
+      <li>
+        Kariv, D., Krueger, N., Kashy, G., &amp; Cisneros, L. (2024). Process innovation is technology transfer too! The Journal of Technology Transfer.
+      </li>
+      <li>
+        Leonard, D. A., &amp; Rayport, J. F. (1997). Spark Innovation Through Empathic Design. Harvard Business Review – 
+        <a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=3863" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        Maaravi, Y., et al. (2023). Using Leading Questions to Reduce Resistance to Innovation. Journal of Creativity.
+      </li>
+      <li>
+        Michael E. Porter (2008) “Forces That Shape Competition” Harvard Business Review – 
+        <a href="https://www.academia.edu/download/49313875/Forces_That_Shape_Competition.pdf#page=25" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        S. Oreg, and J. Goldenberg. (2005) Resistance to Innovation: Its Sources and Manifestations.
+      </li>
+      <li>
+        Vinchon, F., et al. (2023). Artificial intelligence &amp; creativity: A manifesto for collaboration. Journal of Creative Behavior – 
+        <a href="https://doi.org/10.1111/jocb.597" target="_blank">לינק למאמר</a>
+      </li>
+    </ul>
+    <button class="back-to-top" onclick="scrollToTop()">💡 חזרה לתפריט</button>
+  </section>
+
+  <!-- מקטע: קריאת רשות -->
+  <section id="optional-reading">
+    <h2>קריאת רשות</h2>
+    <ul class="article-list">
+      <li>
+        Atkinson, P., &amp; Barker, R. (2023). AI and the social construction of creativity. – 
+        <a href="https://doi.org/10.1177/13548565231187730" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        Bender-Salazar, R. (2023). Design thinking as an effective method for problem-setting and needfinding. – 
+        <a href="https://doi.org/10.1186/s13731-023-00291-2" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        Blank, S. (2019). “Why companies do ‘Innovation Theater’ instead of actual innovation.” – 
+        <a href="https://hbr.org/2019/10/why-companies-do-innovation-theater-instead-of-actual-innovation?ab=hero-subleft-3" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        Clayton M. Christensen, Michael E. Raynor, and Rory McDonald (2015). What Is Disruptive Innovation?
+      </li>
+      <li>
+        Christensen, C. M., et al. (2018). Disruptive innovation: An intellectual history and directions for future research.
+      </li>
+      <li>
+        Christensen, C.M., Ojomo, E. and Bever, D. (2017). Africa’s New Generation of Innovators – 
+        <a href="https://hbr.org/2017/01/africas-new-generation-of-innovators" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        CBINSIGHTS (2020). The Post-Covid World – 
+        <a href="https://www.cbinsights.com/research/report/industries-tech-shaping-world-post-covid/" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        Dweck, C. (2016). What Having a “Growth Mindset” Actually Means – 
+        <a href="https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        Halligan, B. (2020). The Experience Disrupter.
+      </li>
+      <li>
+        Kirsner, S (2018). The biggest obstacles to innovation in large companies.
+      </li>
+      <li>
+        Kolko, J (2015). Design Thinking Comes of Age.
+      </li>
+      <li>
+        Maaravi, Y., &amp; Gur, T. (2022). Perceptions of victimhood and entrepreneurial tendencies.
+      </li>
+      <li>
+        Maaravi, Y., &amp; Heller, B. (2021). Digital Innovation in Times of Crisis.
+      </li>
+      <li>
+        Maaravi, Y., et al. (2020). Ideation in the digital age: literature review and integrative model.
+      </li>
+      <li>
+        Maaravi, Y. (2018). Using hackathons to teach management consulting.
+      </li>
+      <li>
+        Satell, G. (2017). The 4 Types of Innovation and the Problems They Solve – 
+        <a href="https://hbr.org/2017/06/the-4-types-of-innovation-and-the-problems-they-solve" target="_blank">לינק למאמר</a>
+      </li>
+      <li>
+        Zhexembayeva, N. (2020). 3 Things You're Getting Wrong About Organizational Change – 
+        <a href="https://hbsp.harvard.edu/product/H05OBM-PDF-ENG?Ntt=innovation+&itemFindingMethod=Search" target="_blank">לינק למאמר</a>
+      </li>
+    </ul>
+    <button class="back-to-top" onclick="scrollToTop()">💡 חזרה לתפריט</button>
+  </section>
+
+  <!-- מקטע: פניה למרצה -->
+  <section id="contact">
+    <h2>פניה למרצה</h2>
+    <div class="contact-info">
+      <p>
+        <strong>עידית ביטון</strong>
+      </p>
+      <p>
+        דוא"ל: <a href="mailto:Idit.biton@gmail.com">Idit.biton@gmail.com</a>
+      </p>
+      <p>
+        טלפון: <a href="https://wa.me/972546655360" target="_blank">054-6655360</a>
+      </p>
+    </div>
+    <button class="back-to-top" onclick="scrollToTop()">💡 חזרה לתפריט</button>
+  </section>
+
+  <!-- סקריפט לגלילה חלקה לתפריט -->
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+  
+</body>
+</html>
